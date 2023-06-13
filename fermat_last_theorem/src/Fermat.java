@@ -6,8 +6,10 @@ import java.util.Scanner;
 public class Fermat {
     public static void main(String[] args) {
         // Using Scanner class to collect 4 integers
-        System.out.println("Enter for integers to be tested");
         Scanner number = new Scanner(System.in);
+
+        System.out.println("Enter four integers to be tested: ");
+
         int numA = number.nextInt();
         int numB = number.nextInt();
         int numC = number.nextInt();
@@ -17,7 +19,7 @@ public class Fermat {
     }
     // Method to test the theorem
     public static void findTruth(int a, int b, int c, int n) {
-        //String shock;
+
         double valueA = Math.pow(a, n);
         double valueB = Math.pow(b, n);
         double valueC = Math.pow(c, n);
@@ -27,10 +29,8 @@ public class Fermat {
 
         // condition to test the statement
         if (addSome == valueC && n > testNum) {
-            //shock = "Guess the theory needs to be evaluated";
             System.out.println("Guess the theory needs to be evaluated");
         } else if (n <= testNum && addSome == valueC) {
-            //shock = "Holy shit, the theory stands";
             System.out.println("Holy shit, the theory stands");
         } else {
             System.out.println("The theory is flawed");
