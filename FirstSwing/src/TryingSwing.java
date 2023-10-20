@@ -55,11 +55,7 @@ public class TryingSwing extends JFrame {
     }
     public static void main(String[] args) throws Exception {
         //new TryingSwing();
-        Runnable initFrame = new Runnable() {
-            public void run() {
-                new TryingSwing();
-            }
-        };
+        Runnable initFrame = TryingSwing::new;
         SwingUtilities.invokeAndWait(initFrame);
     }
 }
