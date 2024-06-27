@@ -13,7 +13,7 @@ public class TryingSwing extends JFrame {
         // call the method that contains all components
         testingComponents();
     }
-    private void testingComponents() {
+    private void testingComponents() { // some components of Swing
         JLabel myTest = new JLabel();
         myTest.setText("Test window!");
         myTest.setBounds(40, 20, 100, 30);
@@ -44,11 +44,11 @@ public class TryingSwing extends JFrame {
         acceptButton.setBounds(100,70,100,30);
         add(acceptButton);
 
-        acceptButton.addActionListener(e -> {
+        acceptButton.addActionListener(e -> { // action listener
             String helloText = "Hello";
             String name = textBox.getText();
             if (name != null && !name.trim().isEmpty()) {
-                helloText += String.format(", %s", name);
+                helloText += String.format(", %s", name); // welcome the person
             }
             helloLabel.setText(helloText);
         });
